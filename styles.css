@@ -55,6 +55,8 @@ body {
   border: none;
   transition: all .18s ease;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 .btn--primary { background: var(--accent); color: #fff; }
 .btn--primary:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
@@ -187,6 +189,8 @@ body {
 .hero {
   padding: 80px 0 72px;
   background: linear-gradient(135deg, #f8faff 0%, #fff 60%);
+  position: relative;
+  overflow: hidden;
 }
 .hero__inner {
   display: grid;
@@ -700,3 +704,243 @@ body {
   .logo__suffix { display: none; }
   .hero__title { font-size: 28px; }
 }
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+/* --- Keyframes --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-120%) skewX(-12deg); }
+  100% { transform: translateX(220%) skewX(-12deg); }
+}
+@keyframes btn-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.45); }
+  60%       { box-shadow: 0 0 0 14px rgba(37,99,235,0); }
+}
+@keyframes ripple-anim {
+  from { transform: scale(0); opacity: 1; }
+  to   { transform: scale(2.8); opacity: 0; }
+}
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(25px, -20px) scale(1.05); }
+  66%       { transform: translate(-15px, 18px) scale(0.97); }
+}
+@keyframes line-grow {
+  from { transform: scaleX(0); transform-origin: left center; }
+  to   { transform: scaleX(1); transform-origin: left center; }
+}
+@keyframes num-pop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.18); color: #1d4ed8; }
+  100% { transform: scale(1); }
+}
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.25); }
+  55%       { box-shadow: 0 0 0 8px rgba(37,99,235,0); }
+}
+@keyframes spin-check {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* --- Scroll progress bar --- */
+.scroll-bar {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 300;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #60a5fa);
+  border-radius: 0 2px 2px 0;
+  transition: width .08s linear;
+  pointer-events: none;
+}
+
+/* --- Hero ambient orbs --- */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::before {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 70%);
+  top: -160px; right: -80px;
+  animation: orb-drift 10s ease-in-out infinite;
+}
+.hero::after {
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 70%);
+  bottom: -80px; left: 5%;
+  animation: orb-drift 14s ease-in-out infinite reverse;
+}
+.hero__inner { position: relative; z-index: 1; }
+
+/* --- Hero entrance stagger --- */
+.hero__badge { animation: fadeInUp .55s ease .05s both; }
+.hero__title  { animation: fadeInUp .6s  ease .18s both; }
+.hero__desc   { animation: fadeInUp .6s  ease .32s both; }
+.hero__cta    { animation: fadeInUp .6s  ease .46s both; }
+.hero__stats  { animation: fadeInRight .7s ease .2s both; }
+
+/* Badge subtle pulse after entrance */
+.hero__badge { animation: fadeInUp .55s ease .05s both, badge-pulse 3.5s ease-in-out 1.2s infinite; }
+
+/* --- Hero card float --- */
+.hero__card { animation: float 5s ease-in-out infinite; }
+
+/* --- CTA hero button pulse --- */
+.hero__cta .btn:first-child { animation: btn-pulse 2.8s ease-in-out 1.2s infinite; }
+
+/* --- Primary button shimmer --- */
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+  animation: shimmer 4s ease-in-out 2s infinite;
+}
+
+/* --- Ripple --- */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripple-anim .55s ease-out forwards;
+}
+.btn--primary   .btn-ripple { background: rgba(255,255,255,0.35); }
+.btn--outline   .btn-ripple { background: rgba(37,99,235,0.18); }
+.btn--ghost     .btn-ripple { background: rgba(37,99,235,0.12); }
+
+/* --- Logo hover animation --- */
+.logo:hover .logo__icon svg { animation: spin-check .45s ease; }
+
+/* --- Enhanced card hovers --- */
+.adv {
+  transition: box-shadow .22s ease, transform .22s ease, border-color .22s;
+}
+.adv:hover {
+  box-shadow: 0 10px 32px rgba(37,99,235,0.14);
+  transform: translateY(-5px);
+  border-color: var(--accent-mid);
+}
+.adv:hover .adv__icon svg rect { transition: fill .2s; fill: #dbeafe; }
+
+.service {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s;
+}
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(37,99,235,0.16);
+}
+
+.review {
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.review:hover {
+  transform: translateY(-5px) rotate(0.4deg);
+  box-shadow: 0 10px 32px rgba(37,99,235,0.13);
+}
+
+/* --- Problem cards slide in --- */
+.problem-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.problem-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.problem-card--bad.anim-in  { animation: fadeInLeft  .55s ease both; }
+.problem-card--good.anim-in { animation: fadeInRight .55s ease .1s both; }
+
+/* --- Steps line draw on scroll --- */
+.steps-grid.line-visible::before {
+  animation: line-grow .9s cubic-bezier(.4,0,.2,1) .2s both;
+}
+
+/* --- Step hover --- */
+.step {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-mid);
+}
+.step__num {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.step:hover .step__num {
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(37,99,235,0.4);
+}
+
+/* --- Number pop after count --- */
+.stat__num.pop { animation: num-pop .45s ease; }
+
+/* --- Stagger classes (set by JS) --- */
+.stagger-1  { transition-delay: 0ms !important; }
+.stagger-2  { transition-delay: 80ms !important; }
+.stagger-3  { transition-delay: 160ms !important; }
+.stagger-4  { transition-delay: 240ms !important; }
+.stagger-5  { transition-delay: 320ms !important; }
+.stagger-6  { transition-delay: 400ms !important; }
+
+/* --- FAQ smooth answer --- */
+.faq__item { transition: border-color .2s; }
+.faq__item[open] { border-color: var(--accent); }
+.faq__answer { animation: fadeInUp .22s ease; }
+
+/* --- Contact card hover --- */
+.contact-card {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s;
+}
+.contact-card:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-mid);
+  box-shadow: var(--shadow);
+}
+
+/* --- FAB wiggle on first appear --- */
+@keyframes fab-in {
+  0%   { transform: scale(0) rotate(-180deg); opacity: 0; }
+  70%  { transform: scale(1.15) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.fab { animation: fab-in .6s cubic-bezier(.34,1.56,.64,1) 1.5s both; }
+
+/* --- Form input ring --- */
+.form__input {
+  transition: border-color .18s, box-shadow .18s;
+}
+.form__input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* --- Stat number glow --- */
+.stat__num {
+  transition: color .2s;
+}
+
