@@ -706,6 +706,184 @@ body {
 }
 
 /* =============================================
+   CUSTOM CURSOR
+   ============================================= */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+  .cur-dot {
+    position: fixed; top: 0; left: 0; z-index: 9999;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    transition: opacity .2s, transform .12s ease, background .2s;
+    will-change: transform;
+  }
+  .cur-ring {
+    position: fixed; top: 0; left: 0; z-index: 9998;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 2px solid rgba(37,99,235,.45);
+    pointer-events: none;
+    transition: width .3s ease, height .3s ease, background .3s ease, border-color .3s ease, opacity .3s;
+    will-change: transform;
+  }
+  .cur-dot.hover  { background: transparent; transform: scale(0) !important; opacity: 0; }
+  .cur-ring.hover { width: 52px; height: 52px; border-color: var(--accent); background: rgba(37,99,235,.08); }
+  .cur-dot.click  { transform: scale(1.8) !important; }
+  .cur-ring.click { width: 24px; height: 24px; border-color: var(--accent); background: rgba(37,99,235,.2); }
+}
+
+/* =============================================
+   TICKER
+   ============================================= */
+.ticker-wrap {
+  background: var(--accent);
+  overflow: hidden;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+}
+.ticker-track { display: flex; width: 100%; overflow: hidden; }
+.ticker-items {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+  animation: ticker-scroll 32s linear infinite;
+}
+.ticker-items span {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+.ticker-dot { color: rgba(255,255,255,0.35) !important; font-size: 8px !important; }
+.ticker-wrap:hover .ticker-items { animation-play-state: paused; }
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* =============================================
+   BACKGROUNDS
+   ============================================= */
+
+/* Hero: dot grid + gradient orbs */
+.hero {
+  background-image:
+    radial-gradient(ellipse 55% 65% at 78% 45%, rgba(37,99,235,.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 15% 70%, rgba(37,99,235,.04) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='1.2' fill='%232563EB' fill-opacity='0.055'/%3E%3C/svg%3E");
+  background-size: auto, auto, 28px 28px;
+}
+
+/* Advantages: subtle grid */
+.advantages {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h48v48H0z' fill='none'/%3E%3Cpath d='M0 48V0h48' fill='none' stroke='%232563EB' stroke-opacity='.045' stroke-width='.8'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+/* Problem: diagonal stripe */
+.problem {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='24' x2='24' y2='0' stroke='%230f172a' stroke-opacity='.025' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+}
+
+/* Process: rings */
+.process {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='56' fill='none' stroke='%232563EB' stroke-opacity='.04' stroke-width='1'/%3E%3Ccircle cx='60' cy='60' r='38' fill='none' stroke='%232563EB' stroke-opacity='.03' stroke-width='1'/%3E%3Ccircle cx='60' cy='60' r='20' fill='none' stroke='%232563EB' stroke-opacity='.03' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  background-position: center;
+}
+
+/* Contact: mesh gradient */
+.contact {
+  background-image:
+    radial-gradient(ellipse 50% 80% at 0% 50%, rgba(37,99,235,.04) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 100% 30%, rgba(37,99,235,.03) 0%, transparent 50%);
+}
+
+/* =============================================
+   FLOATING PRINTS (hero badges)
+   ============================================= */
+.hero__stats { position: relative; }
+
+.hero-float {
+  position: absolute;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 28px rgba(37,99,235,.13);
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+.hero-float strong  { display: block; font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.hero-float span    { font-size: 11px; color: var(--text-2); }
+.hero-float svg     { flex-shrink: 0; }
+
+.hero-float--tl {
+  top: -18px; left: -24px;
+  animation: float-badge-1 4s ease-in-out infinite;
+}
+.hero-float--br {
+  bottom: -18px; right: -16px;
+  animation: float-badge-2 5s ease-in-out infinite;
+}
+
+@keyframes float-badge-1 {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
+}
+@keyframes float-badge-2 {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50%       { transform: translateY(-10px) rotate(-1deg); }
+}
+
+/* =============================================
+   ACTIVITY TOASTS
+   ============================================= */
+.act-toast {
+  position: fixed;
+  bottom: 96px; left: -320px;
+  z-index: 800;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.14);
+  max-width: 280px;
+  backdrop-filter: blur(8px);
+  transition: left .45s cubic-bezier(.34,1.56,.64,1);
+}
+.act-toast.show { left: 20px; }
+.act-toast__icon { font-size: 22px; flex-shrink: 0; }
+.act-toast__name  { font-weight: 700; font-size: 13px; color: var(--text); }
+.act-toast__label { font-size: 11px; color: var(--text-2); margin-top: 1px; }
+
+/* =============================================
+   3-D TILT CARDS
+   ============================================= */
+.adv, .service, .hero__card, .review, .step {
+  transform-style: flat;
+  will-change: transform;
+}
+
+/* =============================================
    ANIMATIONS
    ============================================= */
 
