@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как работаем — ЦПА Сеть</title>
+  <meta name="description" content="5 шагов от первого созвона до потока заявок. Разбираем нишу, упаковываем воронку, запускаем трафик через ЦПА-биржу.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2563EB"/><path d="M7 14l4.5 4.5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="logo__text">ЦПА<span class="logo__suffix"> Сеть</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="how.html" aria-current="page">Как работаем</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div class="header__right">
+      <a href="tel:+79635229362" class="header__phone">+7 963 522-93-62</a>
+      <a href="contact.html" class="btn btn--sm">Получить заявки</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="page-hero__content">
+      <div class="page-hero__badge">От созвона до заявок — 5 шагов</div>
+      <h1 class="page-hero__title">Прозрачный процесс<br>без <span class="accent">лишней сложности</span></h1>
+      <p class="page-hero__desc">Вы занимаетесь своим продуктом — мы настраиваем поток заявок. Первые лиды приходят в течение 2–5 дней после запуска.</p>
+      <div class="hero__cta">
+        <a href="contact.html" class="btn btn--lg btn--primary">Начать сейчас</a>
+        <a href="services.html" class="btn btn--ghost btn--lg">Услуги и цены</a>
+      </div>
+    </div>
+
+    <!-- FLOW DIAGRAM ILLUSTRATION -->
+    <div class="page-hero__art">
+      <svg class="art-flow" viewBox="0 0 460 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="flow-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="0.9" fill="#2563EB" fill-opacity="0.07"/>
+          </pattern>
+          <radialGradient id="flow-glow1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#dbeafe" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="node-shadow">
+            <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#2563EB" flood-opacity="0.18"/>
+          </filter>
+        </defs>
+
+        <!-- Background -->
+        <rect width="460" height="340" fill="url(#flow-dots)"/>
+
+        <!-- ─── CURVED PATH connecting nodes ─── -->
+        <!-- 5 nodes roughly at:
+             N1: (52, 170)  N2: (144, 90)  N3: (236, 170)  N4: (328, 90)  N5: (420, 170) -->
+        <path d="M52,170 C90,170 106,90 144,90 C182,90 198,170 236,170 C274,170 290,90 328,90 C366,90 382,170 420,170"
+              stroke="#dbeafe" stroke-width="3" fill="none"/>
+        <path d="M52,170 C90,170 106,90 144,90 C182,90 198,170 236,170 C274,170 290,90 328,90 C366,90 382,170 420,170"
+              stroke="#2563EB" stroke-width="2" stroke-dasharray="6 5" fill="none" stroke-opacity="0.35"/>
+
+        <!-- Animated dot following the path -->
+        <circle r="5" fill="#2563EB" fill-opacity="0.7">
+          <animateMotion dur="5s" repeatCount="indefinite"
+            path="M52,170 C90,170 106,90 144,90 C182,90 198,170 236,170 C274,170 290,90 328,90 C366,90 382,170 420,170"/>
+        </circle>
+        <circle r="3.5" fill="#3b82f6" fill-opacity="0.5">
+          <animateMotion dur="5s" repeatCount="indefinite" begin="2.5s"
+            path="M52,170 C90,170 106,90 144,90 C182,90 198,170 236,170 C274,170 290,90 328,90 C366,90 382,170 420,170"/>
+        </circle>
+
+        <!-- ─── NODE 1: Созвон ─── -->
+        <circle cx="52" cy="170" r="36" fill="white" stroke="#dbeafe" stroke-width="2" filter="url(#node-shadow)"/>
+        <circle cx="52" cy="170" r="30" fill="#eff6ff"/>
+        <circle cx="52" cy="170" r="22" fill="#2563EB"/>
+        <text x="52" y="167" text-anchor="middle" fill="white" font-size="10" font-family="Space Grotesk" font-weight="800">01</text>
+        <text x="52" y="178" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7.5" font-family="Space Grotesk">СТАРТ</text>
+        <!-- Label -->
+        <rect x="4" y="215" width="96" height="46" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="52" y="232" text-anchor="middle" fill="#0f172a" font-size="11" font-family="Space Grotesk" font-weight="700">Созвон</text>
+        <text x="52" y="246" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">3–5 минут</text>
+        <text x="52" y="257" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">разбираем нишу</text>
+
+        <!-- ─── NODE 2: Упаковка ─── -->
+        <circle cx="144" cy="90" r="36" fill="white" stroke="#dbeafe" stroke-width="2" filter="url(#node-shadow)"/>
+        <circle cx="144" cy="90" r="30" fill="#eff6ff"/>
+        <circle cx="144" cy="90" r="22" fill="#2563EB"/>
+        <text x="144" y="87" text-anchor="middle" fill="white" font-size="10" font-family="Space Grotesk" font-weight="800">02</text>
+        <text x="144" y="98" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7" font-family="Space Grotesk">3–7 ДНЕЙ</text>
+        <!-- Label -->
+        <rect x="96" y="20" width="96" height="46" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="144" y="37" text-anchor="middle" fill="#0f172a" font-size="11" font-family="Space Grotesk" font-weight="700">Упаковка</text>
+        <text x="144" y="51" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">лид-магнит, бот,</text>
+        <text x="144" y="62" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">лендинг</text>
+
+        <!-- ─── NODE 3: Биржа ─── -->
+        <circle cx="236" cy="170" r="36" fill="white" stroke="#dbeafe" stroke-width="2" filter="url(#node-shadow)"/>
+        <circle cx="236" cy="170" r="30" fill="#eff6ff"/>
+        <circle cx="236" cy="170" r="22" fill="#2563EB"/>
+        <text x="236" y="167" text-anchor="middle" fill="white" font-size="10" font-family="Space Grotesk" font-weight="800">03</text>
+        <text x="236" y="178" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7" font-family="Space Grotesk">ЗАПУСК</text>
+        <!-- Label -->
+        <rect x="188" y="215" width="96" height="46" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="236" y="232" text-anchor="middle" fill="#0f172a" font-size="11" font-family="Space Grotesk" font-weight="700">Биржа</text>
+        <text x="236" y="246" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">оффер размещён</text>
+        <text x="236" y="257" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">10+ каналов</text>
+
+        <!-- ─── NODE 4: Заявки ─── -->
+        <circle cx="328" cy="90" r="36" fill="white" stroke="#dbeafe" stroke-width="2" filter="url(#node-shadow)"/>
+        <circle cx="328" cy="90" r="30" fill="#eff6ff"/>
+        <circle cx="328" cy="90" r="22" fill="#2563EB"/>
+        <text x="328" y="87" text-anchor="middle" fill="white" font-size="10" font-family="Space Grotesk" font-weight="800">04</text>
+        <text x="328" y="98" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7" font-family="Space Grotesk">2–5 ДНЕЙ</text>
+        <!-- Label -->
+        <rect x="280" y="20" width="96" height="46" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="328" y="37" text-anchor="middle" fill="#0f172a" font-size="11" font-family="Space Grotesk" font-weight="700">Заявки</text>
+        <text x="328" y="51" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">подтверждаете</text>
+        <text x="328" y="62" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter">только целевые</text>
+
+        <!-- ─── NODE 5: Рост ─── -->
+        <circle cx="420" cy="170" r="36" fill="white" stroke="#2563EB" stroke-width="2" filter="url(#node-shadow)"/>
+        <circle cx="420" cy="170" r="30" fill="#dbeafe"/>
+        <circle cx="420" cy="170" r="22" fill="#2563EB">
+          <animate attributeName="r" values="22;26;22" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="fill-opacity" values="1;0.8;1" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="420" y="167" text-anchor="middle" fill="white" font-size="10" font-family="Space Grotesk" font-weight="800">05</text>
+        <text x="420" y="178" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7" font-family="Space Grotesk">РОСТ</text>
+        <!-- Label -->
+        <rect x="372" y="215" width="84" height="46" rx="10" fill="#eff6ff" stroke="#dbeafe" stroke-width="1.5"/>
+        <text x="414" y="232" text-anchor="middle" fill="#1d4ed8" font-size="11" font-family="Space Grotesk" font-weight="700">Масштаб</text>
+        <text x="414" y="246" text-anchor="middle" fill="#3b82f6" font-size="9" font-family="Inter">больше заявок</text>
+        <text x="414" y="257" text-anchor="middle" fill="#3b82f6" font-size="9" font-family="Inter">по запросу</text>
+
+        <!-- Arrow on last node -->
+        <path d="M406,148 L420,136 L434,148" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+        <!-- Bottom timeline bar -->
+        <rect x="16" y="295" width="428" height="6" rx="3" fill="#e2e8f0"/>
+        <rect x="16" y="295" width="428" height="6" rx="3" fill="#2563EB" fill-opacity="0.5">
+          <animate attributeName="width" values="0;428" dur="3s" repeatCount="indefinite" calcMode="ease-in-out"/>
+        </rect>
+        <text x="16" y="318" fill="#94a3b8" font-size="10" font-family="Inter">День 1</text>
+        <text x="190" y="318" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Inter">День 4–7</text>
+        <text x="428" y="318" text-anchor="end" fill="#2563EB" font-size="10" font-family="Space Grotesk" font-weight="700">День 10+</text>
+        <text x="428" y="332" text-anchor="end" fill="#2563EB" font-size="9" font-family="Inter">первые заявки</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DETAILED STEPS ===== -->
+<section class="process-detail">
+  <div class="container">
+    <h2 class="section-title section-title--center">Каждый шаг подробно</h2>
+    <p class="section-sub section-sub--center">Никаких неожиданностей — вы знаете что происходит на каждом этапе</p>
+    <div class="steps-detailed">
+
+      <div class="step-detail reveal">
+        <div class="step-detail__num">01</div>
+        <div class="step-detail__body">
+          <h3 class="step-detail__title">Созвон 3–5 минут</h3>
+          <p class="step-detail__desc">Уточняем нишу, целевую аудиторию, продукт и желаемый объём заявок. Определяем, подходит ли вам модель ЦПА, или нужен другой инструмент.</p>
+          <ul class="step-detail__features">
+            <li>Разбираем вашу нишу и конкурентный рынок</li>
+            <li>Оцениваем потенциал ЦПА для вашего продукта</li>
+            <li>Рассчитываем прогнозный бюджет и окупаемость</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-detail reveal">
+        <div class="step-detail__num">02</div>
+        <div class="step-detail__body">
+          <h3 class="step-detail__title">Упаковка воронки (3–7 дней)</h3>
+          <p class="step-detail__desc">Создаём полный набор материалов под вашу нишу: лид-магнит, чат-бот и лендинг с формой. Проверенная структура, которая прогревает клиента до сделки.</p>
+          <ul class="step-detail__features">
+            <li>Лид-магнит — полезный материал, который мотивирует оставить контакт</li>
+            <li>Чат-бот — автоматически квалифицирует лиды и прогревает до созвона</li>
+            <li>Лендинг — целевая страница с оффером и формой заявки</li>
+            <li>Структура воронки — последовательность касаний до сделки</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-detail reveal">
+        <div class="step-detail__num">03</div>
+        <div class="step-detail__body">
+          <h3 class="step-detail__title">Запуск в ЦПА-сеть</h3>
+          <p class="step-detail__desc">Ваш оффер появляется на бирже — арбитражники подхватывают его и начинают генерировать трафик из 10+ каналов. Вы не настраиваете рекламу сами.</p>
+          <ul class="step-detail__features">
+            <li>Telegram-каналы, Авито, SEO, ВКонтакте, email-рассылки</li>
+            <li>Вертикальное видео, агентский трафик, партнёрские сети</li>
+            <li>Персональный менеджер контролирует качество трафика</li>
+            <li>Нежелательные каналы можно отключить по запросу</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-detail reveal">
+        <div class="step-detail__num">04</div>
+        <div class="step-detail__body">
+          <h3 class="step-detail__title">Вы получаете и подтверждаете заявки</h3>
+          <p class="step-detail__desc">Заявки поступают в CRM на бирже. Вы просматриваете каждую и подтверждаете только целевые. Нецелевую заявку — не подтверждаете, не платите.</p>
+          <ul class="step-detail__features">
+            <li>Встроенная CRM — все заявки в одном месте</li>
+            <li>Оплата только после вашего подтверждения</li>
+            <li>Расчёт с арбитражниками — 3–4 тыс. ₽ в неделю по факту</li>
+            <li>Еженедельная статистика от менеджера</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-detail reveal">
+        <div class="step-detail__num">05</div>
+        <div class="step-detail__body">
+          <h3 class="step-detail__title">Масштабируем вместе</h3>
+          <p class="step-detail__desc">Когда воронка показала результат — строим персональный план под вашу цель по прибыли. Увеличиваем поток заявок, оптимизируем воронку, масштабируем по запросу.</p>
+          <ul class="step-detail__features">
+            <li>Персональный план роста под вашу цель</li>
+            <li>Оптимизация воронки по конверсионным данным</li>
+            <li>10% комиссии — только с чистой прибыли от продаж</li>
+            <li>Ежемесячный отчёт по бирже</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title section-title--center">Частые вопросы</h2>
+    <div class="faq-list">
+      <details class="faq__item">
+        <summary class="faq__question">Что такое ЦПА-сеть и чем она отличается от обычной рекламы?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">ЦПА-сеть — это биржа, где заказчики (эксперты) и арбитражники (генераторы трафика) встречаются напрямую. Вы платите фиксированную сумму за каждую подтверждённую заявку — после её получения, а не авансом. В отличие от Яндекса или ВКонтакте, где вы платите за клики и показы вне зависимости от результата.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Как защищены мои вложения?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">В договоре прописана 90-дневная гарантия: если вы не выйдете на окупаемость фиксированной части при условии следования нашим рекомендациям — продлеваем договор бесплатно до достижения результата. Это не рекламный ход, а условие в документе.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Какие ниши подходят для ЦПА-сети?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">Работаем с большинством ниш: психологи, юристы, финансовые консультанты, банкротство, кухни и мебель на заказ, недвижимость, кредитование, digital-услуги, онлайн-образование и другие. Чем конкретнее ваш продукт — тем выше качество заявок.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Сколько заявок я буду получать в месяц?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">Объём зависит от вашего бюджета на заявки и ниши. При бюджете 3–4 тыс. ₽ в неделю — от 15 до 25 заявок. Для быстрых ниш уже 100 заявок при бюджете 20k достаточно для выхода на окупаемость. Масштабируется по запросу.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Как быстро всё запускается после оплаты?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">Упаковка занимает 3–7 дней. После того как лид-магнит, чат-бот и лендинг готовы — ваш оффер появляется на бирже, и арбитражники начинают работу. Первые заявки, как правило, приходят в первые 2–5 дней после запуска.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Что если заявки нецелевые — я всё равно плачу?<svg class="faq__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq__answer">Нет. Вы платите только за подтверждённые заявки — те, которые вы сами приняли как целевые. Если заявка явно нецелевая — вы её не подтверждаете и не оплачиваете. Арбитражнику невыгодно лить некачественный трафик, он работает за результат.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-banner">
+  <div class="container cta-banner__inner">
+    <div class="cta-banner__title">Готовы к первым заявкам?</div>
+    <p class="cta-banner__desc">Созвонимся на 3–5 минут — разберём вашу нишу и рассчитаем бюджет под результат.</p>
+    <div class="cta-banner__btns">
+      <a href="contact.html" class="btn btn--lg btn--white">Записаться на созвон</a>
+      <a href="services.html" class="btn btn--lg btn--ghost-white">Посмотреть цены</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__logo">
+      <a href="index.html" class="logo">
+        <span class="logo__icon"><svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2563EB"/><path d="M7 14l4.5 4.5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="logo__text">ЦПА Сеть</span>
+      </a>
+      <p class="footer__tagline">Готовые заявки. Постоплата. Результат.</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="how.html">Как работаем</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div class="footer__legal">
+      <p>ИП Артём — ИНН: 227901844963</p>
+      <p><a href="#">Политика конфиденциальности</a></p>
+      <p class="footer__copy">© <span id="year"></span> ЦПА Сеть. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://t.me/artem_tele2" class="fab" target="_blank" rel="noopener" title="Написать в Telegram">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21.5 2.5L2 10l7 2.5M21.5 2.5l-5.5 19-7-9M21.5 2.5L9 12.5m0 0L11.5 21" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<script src="script.js"></script>
+</body>
+</html>

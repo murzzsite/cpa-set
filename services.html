@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги и цены — ЦПА Сеть</title>
+  <meta name="description" content="Упаковка воронки, ЦПА-трафик и масштабирование. Прозрачные цены: 20 000 ₽ разово + 150–200 ₽ за заявку.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2563EB"/><path d="M7 14l4.5 4.5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="logo__text">ЦПА<span class="logo__suffix"> Сеть</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html" aria-current="page">Услуги и цены</a>
+      <a href="how.html">Как работаем</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div class="header__right">
+      <a href="tel:+79635229362" class="header__phone">+7 963 522-93-62</a>
+      <a href="contact.html" class="btn btn--sm">Получить заявки</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="page-hero__content">
+      <div class="page-hero__badge">Прозрачное ценообразование</div>
+      <h1 class="page-hero__title">Два блока — упаковка<br>и <span class="accent">поток заявок</span></h1>
+      <p class="page-hero__desc">Один раз упакуем вашу воронку, потом подключаем трафик через ЦПА-биржу. Вы платите за каждую подтверждённую заявку — и ни копейки авансом.</p>
+      <div class="hero__cta">
+        <a href="contact.html" class="btn btn--lg btn--primary">Начать</a>
+        <a href="how.html" class="btn btn--ghost btn--lg">Как это работает</a>
+      </div>
+    </div>
+
+    <!-- FUNNEL ILLUSTRATION -->
+    <div class="page-hero__art">
+      <svg class="art-funnel" viewBox="0 0 380 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#dbeafe"/>
+            <stop offset="100%" stop-color="#bfdbfe"/>
+          </linearGradient>
+          <linearGradient id="fg2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#93c5fd"/>
+            <stop offset="100%" stop-color="#60a5fa"/>
+          </linearGradient>
+          <linearGradient id="fg3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#2563EB"/>
+          </linearGradient>
+          <linearGradient id="fg4" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1d4ed8"/>
+            <stop offset="100%" stop-color="#1e40af"/>
+          </linearGradient>
+          <pattern id="dots-sm" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+            <circle cx="9" cy="9" r="1" fill="#2563EB" fill-opacity="0.08"/>
+          </pattern>
+        </defs>
+
+        <!-- Background dots -->
+        <rect width="380" height="420" fill="url(#dots-sm)"/>
+
+        <!-- ─── FUNNEL LAYERS ─── -->
+        <!-- Layer 1: Трафик (widest, 340px) -->
+        <path d="M 20 44 L 360 44 L 325 104 L 55 104 Z" fill="url(#fg1)" rx="6"/>
+        <rect x="20" y="44" width="340" height="4" rx="2" fill="#bfdbfe"/>
+        <!-- Label -->
+        <text x="190" y="69" text-anchor="middle" fill="#1e40af" font-size="13.5" font-family="Space Grotesk" font-weight="700">10+ источников трафика</text>
+        <text x="190" y="87" text-anchor="middle" fill="#3b82f6" font-size="11" font-family="Inter">Telegram · Авито · SEO · VK · Рассылки</text>
+        <!-- % badge -->
+        <rect x="328" y="52" width="42" height="22" rx="6" fill="white" fill-opacity="0.7"/>
+        <text x="349" y="67" text-anchor="middle" fill="#1d4ed8" font-size="11" font-family="Space Grotesk" font-weight="700">100%</text>
+
+        <!-- Decorative traffic dots (scattered above layer 1) -->
+        <circle cx="38" cy="25" r="4" fill="#2563EB" fill-opacity="0.2"/>
+        <circle cx="60" cy="18" r="3" fill="#2563EB" fill-opacity="0.15"/>
+        <circle cx="85" cy="28" r="3.5" fill="#2563EB" fill-opacity="0.18"/>
+        <circle cx="110" cy="15" r="2.5" fill="#2563EB" fill-opacity="0.12"/>
+        <circle cx="145" cy="22" r="4" fill="#2563EB" fill-opacity="0.2"/>
+        <circle cx="180" cy="12" r="3" fill="#2563EB" fill-opacity="0.15"/>
+        <circle cx="215" cy="26" r="3.5" fill="#2563EB" fill-opacity="0.18"/>
+        <circle cx="250" cy="16" r="3" fill="#2563EB" fill-opacity="0.12"/>
+        <circle cx="285" cy="22" r="4" fill="#2563EB" fill-opacity="0.2"/>
+        <circle cx="320" cy="14" r="2.5" fill="#2563EB" fill-opacity="0.15"/>
+        <circle cx="348" cy="28" r="3" fill="#2563EB" fill-opacity="0.18"/>
+
+        <!-- Connector gap -->
+        <rect x="178" y="100" width="24" height="16" rx="4" fill="#e0eaff"/>
+        <path d="M186 104 L190 112 L194 104" fill="#3b82f6" fill-opacity="0.6"/>
+
+        <!-- Layer 2: Входящие лиды -->
+        <path d="M 55 120 L 325 120 L 285 180 L 95 180 Z" fill="url(#fg2)"/>
+        <rect x="55" y="120" width="270" height="4" rx="2" fill="#93c5fd"/>
+        <text x="190" y="145" text-anchor="middle" fill="#fff" font-size="13.5" font-family="Space Grotesk" font-weight="700">Входящие лиды</text>
+        <text x="190" y="163" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-family="Inter">Арбитражники фильтруют некачественный трафик</text>
+        <rect x="278" y="128" width="36" height="22" rx="6" fill="white" fill-opacity="0.35"/>
+        <text x="296" y="143" text-anchor="middle" fill="#fff" font-size="11" font-family="Space Grotesk" font-weight="700">~60%</text>
+
+        <!-- Connector -->
+        <rect x="178" y="176" width="24" height="16" rx="4" fill="#c0d8ff"/>
+        <path d="M186 180 L190 188 L194 180" fill="#2563EB" fill-opacity="0.7"/>
+
+        <!-- Layer 3: Проверенные заявки -->
+        <path d="M 95 196 L 285 196 L 240 256 L 140 256 Z" fill="url(#fg3)"/>
+        <rect x="95" y="196" width="190" height="4" rx="2" fill="#3b82f6"/>
+        <text x="190" y="221" text-anchor="middle" fill="#fff" font-size="13.5" font-family="Space Grotesk" font-weight="700">Проверенные заявки</text>
+        <text x="190" y="239" text-anchor="middle" fill="rgba(255,255,255,0.88)" font-size="11" font-family="Inter">Антифрод — только живые люди</text>
+        <rect x="238" y="204" width="36" height="22" rx="6" fill="white" fill-opacity="0.25"/>
+        <text x="256" y="219" text-anchor="middle" fill="#fff" font-size="11" font-family="Space Grotesk" font-weight="700">~30%</text>
+
+        <!-- Connector -->
+        <rect x="178" y="252" width="24" height="16" rx="4" fill="#a8c8ff"/>
+        <path d="M186 256 L190 264 L194 256" fill="#1d4ed8" fill-opacity="0.8"/>
+
+        <!-- Layer 4: Ваши клиенты (narrowest) -->
+        <path d="M 140 272 L 240 272 L 215 332 L 165 332 Z" fill="url(#fg4)"/>
+        <rect x="140" y="272" width="100" height="4" rx="2" fill="#1d4ed8"/>
+        <text x="190" y="297" text-anchor="middle" fill="#fff" font-size="13" font-family="Space Grotesk" font-weight="700">Ваши клиенты</text>
+        <text x="190" y="314" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="10.5" font-family="Inter">Подтверждённые заявки</text>
+        <rect x="202" y="280" width="30" height="22" rx="6" fill="white" fill-opacity="0.2"/>
+        <text x="217" y="295" text-anchor="middle" fill="#fff" font-size="11" font-family="Space Grotesk" font-weight="700">~15%</text>
+
+        <!-- Bottom label -->
+        <path d="M 185 338 L 190 352 L 195 338" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <rect x="125" y="355" width="130" height="32" rx="10" fill="#1d4ed8"/>
+        <text x="190" y="376" text-anchor="middle" fill="#fff" font-size="12" font-family="Space Grotesk" font-weight="700" letter-spacing="0.5">ПОСТОПЛАТА</text>
+
+        <!-- Animated flowing dots -->
+        <circle r="5" fill="#2563EB" fill-opacity="0.55">
+          <animateMotion dur="3.8s" repeatCount="indefinite" path="M190,10 L190,340" calcMode="linear">
+            <mpath/>
+          </animateMotion>
+        </circle>
+        <circle r="4" fill="#1d4ed8" fill-opacity="0.5">
+          <animateMotion dur="3.8s" repeatCount="indefinite" begin="1.3s" path="M175,10 L183,340" calcMode="linear"/>
+        </circle>
+        <circle r="3.5" fill="#3b82f6" fill-opacity="0.45">
+          <animateMotion dur="3.8s" repeatCount="indefinite" begin="2.4s" path="M205,10 L197,340" calcMode="linear"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title section-title--center">Что входит в работу</h2>
+    <p class="section-sub section-sub--center">Два блока: упаковка воронки и запуск трафика через ЦПА-сеть</p>
+    <div class="services-grid">
+      <div class="service service--featured">
+        <div class="service__tag">Старт</div>
+        <h3 class="service__title">Упаковка</h3>
+        <p class="service__desc">Полная подготовка воронки продаж под вашу нишу — один раз и навсегда</p>
+        <ul class="service__list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Разработка лид-магнита под нишу</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Сборка и настройка чат-бота</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Одностраничник с формой для лидов</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Структура продающей воронки</li>
+        </ul>
+        <div class="service__price">20 000 ₽ <span>разово</span></div>
+        <a href="contact.html" class="btn btn--primary">Начать</a>
+      </div>
+      <div class="service">
+        <div class="service__tag">Трафик</div>
+        <h3 class="service__title">ЦПА-сеть</h3>
+        <p class="service__desc">Доступ к бирже и персональный менеджер, который ведёт вашу кампанию</p>
+        <ul class="service__list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Доступ к децентрализованной бирже</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Настройка и ведение кампании</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>10+ каналов трафика одновременно</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Встроенная CRM — видите все заявки</li>
+        </ul>
+        <div class="service__price">150–200 ₽ <span>за заявку</span></div>
+        <a href="contact.html" class="btn btn--outline">Подключиться</a>
+      </div>
+      <div class="service">
+        <div class="service__tag">Рост</div>
+        <h3 class="service__title">Масштабирование</h3>
+        <p class="service__desc">Персональный план роста и сопровождение продаж на долгосрочной основе</p>
+        <ul class="service__list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Персональный план под вашу цель по прибыли</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Сопровождение продаж и воронки</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Оптимизация под результат</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#eff6ff"/><path d="M4.5 8l2 2 5-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ежемесячный отчёт по бирже</li>
+        </ul>
+        <div class="service__price">10% <span>от чистой прибыли</span></div>
+        <a href="contact.html" class="btn btn--outline">Обсудить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section class="price" id="price">
+  <div class="container">
+    <h2 class="section-title section-title--center">Прозрачное ценообразование</h2>
+    <p class="section-sub section-sub--center">Никаких скрытых платежей — всё зафиксировано в договоре</p>
+    <div class="price-wrap">
+      <table class="price-table">
+        <thead>
+          <tr><th>Услуга</th><th>Стоимость</th><th>Примечание</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Разработка лид-магнита</td><td class="price-val">Включено</td><td>Входит в упаковку</td></tr>
+          <tr><td>Сборка чат-бота</td><td class="price-val">Включено</td><td>Входит в упаковку</td></tr>
+          <tr><td>Лендинг с формой</td><td class="price-val">Включено</td><td>Входит в упаковку</td></tr>
+          <tr class="price-highlight"><td><strong>Упаковка (всё вместе)</strong></td><td class="price-val"><strong>20 000 ₽</strong></td><td>Разовый платёж</td></tr>
+          <tr><td>Заявка — быстрые ниши</td><td class="price-val">от 150 ₽</td><td>Психология, кухни, юрист и др.</td></tr>
+          <tr><td>Заявка — длинный цикл</td><td class="price-val">200 ₽</td><td>Недвижимость, кредитование</td></tr>
+          <tr class="price-highlight"><td><strong>Комиссия с продаж</strong></td><td class="price-val"><strong>10%</strong></td><td>От чистой прибыли, раз в месяц</td></tr>
+          <tr class="price-total"><td>Бюджет старта — быстрые ниши</td><td class="price-val">~25 000 ₽</td><td>20k упаковка + 5k на заявки</td></tr>
+          <tr class="price-total"><td>Бюджет старта — длинный цикл</td><td class="price-val">~40 000 ₽</td><td>20k упаковка + 20k на 100 заявок</td></tr>
+        </tbody>
+      </table>
+      <div class="price-note">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#dbeafe"/><path d="M10 9v5M10 7v.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Заявки оплачиваются <strong>постфактум</strong> — вы рассчитываетесь с арбитражниками по 3–4 тыс. ₽ в неделю, по факту получения и подтверждения лидов.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-banner">
+  <div class="container cta-banner__inner">
+    <div class="cta-banner__title">Готовы запустить поток заявок?</div>
+    <p class="cta-banner__desc">Созвонимся на 3–5 минут — разберём вашу нишу и рассчитаем бюджет под результат.</p>
+    <div class="cta-banner__btns">
+      <a href="contact.html" class="btn btn--lg btn--white">Записаться на созвон</a>
+      <a href="how.html" class="btn btn--lg btn--ghost-white">Как это работает</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__logo">
+      <a href="index.html" class="logo">
+        <span class="logo__icon"><svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2563EB"/><path d="M7 14l4.5 4.5L21 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="logo__text">ЦПА Сеть</span>
+      </a>
+      <p class="footer__tagline">Готовые заявки. Постоплата. Результат.</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="how.html">Как работаем</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div class="footer__legal">
+      <p>ИП Артём — ИНН: 227901844963</p>
+      <p><a href="#">Политика конфиденциальности</a></p>
+      <p class="footer__copy">© <span id="year"></span> ЦПА Сеть. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://t.me/artem_tele2" class="fab" target="_blank" rel="noopener" title="Написать в Telegram">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21.5 2.5L2 10l7 2.5M21.5 2.5l-5.5 19-7-9M21.5 2.5L9 12.5m0 0L11.5 21" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 (() => {
   const LEAD_ENDPOINT = 'https://lead-relay.leestygpt.workers.dev/lead/3PL59HDQVG';
 
+  /* ─────────────── ACTIVE NAV ─────────────── */
+  const currentFile = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a, .footer__nav a').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('/').pop();
+    if (href === currentFile || (currentFile === '' && href === 'index.html')) {
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+
   /* ─────────────── ГОД ─────────────── */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
