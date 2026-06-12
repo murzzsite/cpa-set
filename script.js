@@ -14,46 +14,7 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ─────────────── CUSTOM CURSOR ─────────────── */
   const isTouchDevice = () => window.matchMedia('(pointer: coarse)').matches;
-  let dot, ring, mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let rx = mx, ry = my, rafId;
-
-  if (!isTouchDevice()) {
-    dot  = document.createElement('div'); dot.className  = 'cur-dot';
-    ring = document.createElement('div'); ring.className = 'cur-ring';
-    document.body.append(dot, ring);
-
-    const moveDot = (x, y) => {
-      dot.style.transform = `translate(${x - 4}px, ${y - 4}px)`;
-    };
-
-    const animRing = () => {
-      rx += (mx - rx) * 0.13;
-      ry += (my - ry) * 0.13;
-      ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
-      rafId = requestAnimationFrame(animRing);
-    };
-    animRing();
-
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      moveDot(mx, my);
-    });
-
-    document.addEventListener('mousedown', () => {
-      dot.classList.add('click'); ring.classList.add('click');
-    });
-    document.addEventListener('mouseup', () => {
-      dot.classList.remove('click'); ring.classList.remove('click');
-    });
-
-    const hoverEls = 'a, button, .btn, .adv, .service, .review, .faq__question, .step, .problem-card';
-    document.querySelectorAll(hoverEls).forEach(el => {
-      el.addEventListener('mouseenter', () => { dot.classList.add('hover'); ring.classList.add('hover'); });
-      el.addEventListener('mouseleave', () => { dot.classList.remove('hover'); ring.classList.remove('hover'); });
-    });
-  }
 
   /* ─────────────── SCROLL PROGRESS ─────────────── */
   const scrollBar = document.createElement('div');

@@ -1033,32 +1033,7 @@ body {
   .hero__title { font-size: 28px; }
 }
 
-/* =============================================
-   CUSTOM CURSOR
-   ============================================= */
-@media (pointer: fine) {
-  * { cursor: none !important; }
-  .cur-dot {
-    position: fixed; top: 0; left: 0; z-index: 9999;
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--accent);
-    pointer-events: none;
-    transition: opacity .2s, transform .12s ease, background .2s;
-    will-change: transform;
-  }
-  .cur-ring {
-    position: fixed; top: 0; left: 0; z-index: 9998;
-    width: 36px; height: 36px; border-radius: 50%;
-    border: 2px solid rgba(37,99,235,.45);
-    pointer-events: none;
-    transition: width .3s ease, height .3s ease, background .3s ease, border-color .3s ease, opacity .3s;
-    will-change: transform;
-  }
-  .cur-dot.hover  { background: transparent; transform: scale(0) !important; opacity: 0; }
-  .cur-ring.hover { width: 52px; height: 52px; border-color: var(--accent); background: rgba(37,99,235,.08); }
-  .cur-dot.click  { transform: scale(1.8) !important; }
-  .cur-ring.click { width: 24px; height: 24px; border-color: var(--accent); background: rgba(37,99,235,.2); }
-}
+/* custom cursor removed */
 
 /* =============================================
    TICKER
